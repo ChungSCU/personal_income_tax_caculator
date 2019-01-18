@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.main-div {
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.title-info {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.function {
+    margin: 20px auto 0 auto;
+    padding-top: 40px;
+    width: 1085px;
+    height: 520px;
+    border: 2px solid #bbe1f1;
+    border-top: 2px dashed #bbe1f1;
+    border-radius: 10px;
+    background: #eefaff;
+}
+
+/*******************************************/
+
+.source-data {
+    padding-left: 45px;
+    width: 540px;
+    border-width: 2px;
+    float: left;
+}
+
+.source-data div {
+    margin-bottom: 15px;
+}
+
+.left-label {
+    margin: 0;
+    width: 115px;
+    float: left;
+}
+
+.bottom-label, .true_info, .error_info, #err_month {
+    padding-left: 115px;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+    color: green;
+}
+
+.true_info {
+    padding-left: 0;
+}
+
+#err_month {
+    padding-left: 0;
+    color: red;
+}
+
+.error_info {
+    padding-left: 0;
+    color: red;
+}
+
+/*******************************************/
+
+.vertical-line {
+    margin: 0;
+    width: 0;
+    height: 505px;
+    border: 1px dashed #bbe1f1;
+    float: left;
+}
+
+/*******************************************/
+
+.result-data {
+    padding-left: 25px;
+    width: 430px;
+    float: left;
+}
+
+input {
+    width: 160px;
+    height: 25px;
+}
+
+input:hover, textarea:hover, input:focus, textarea:focus, .error_input:focus {
+    border-color: #C9C9C9;
+}
+
+.error_input:focus {
+    border-width: 3px;
+    border-color: red;
+}
+
+#disabled-input {
+    width: 305px;
+}
+
+textarea {
+    width: 400px;
+    height: 48px;
+}
+
+.table-name {
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.table-info {
+    margin: 3px auto 15px auto;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+}
+
+table.gridtable {
+    margin-bottom: 25px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 11px;
+    color: #333333;
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+}
+
+table.gridtable th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+}
+
+table.gridtable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+}

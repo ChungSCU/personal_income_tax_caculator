@@ -1,0 +1,131 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>个税小工具</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/button.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/sweetalert.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="main-div">
+        <div class="title-info">
+            <h3>新个税（累计预扣预缴）计算器</h3>
+        </div>
+        <div class="function">
+            <div class="source-data">
+                <div>
+                    <label class="left-label">计算月份：</label>
+                    <input id="month" type="text" placeholder="即当年内第几个月的税费" />
+                    <label id="err_month"></label>
+                </div>
+                <div>
+                    <label class="left-label">工资收入：</label>
+                    <textarea id="salary" placeholder="逐月输入，以空格隔开" rows="3"></textarea>
+                    <div class="bottom-label"><label  id="salary_sum"></label></div>
+                </div>
+                <div>
+                    <label class="left-label">伙食费用：</label>
+                    <textarea id="food_cost" placeholder="算作免税收入部分，逐月输入，以空格隔开" rows="3"></textarea>
+                    <div class="bottom-label"><label id='food_cost_sum'></label></div>
+                </div>
+                <div>
+                    <label class="left-label">社会保险：</label>
+                    <textarea id="social_insurance" placeholder="算作专项扣除部分，逐月输入，以空格隔开" rows="3"></textarea>
+                    <div class="bottom-label"><label id='social_insurance_sum'></label></div>
+                </div>
+                <div>
+                    <label class="left-label">公积金：</label>
+                    <textarea id="accumulate_fund" placeholder="算作专项扣除部分，逐月输入，以空格隔开" rows="3"></textarea>
+                    <div class="bottom-label"><label id='accumulate_fund_sum'></label></div>
+                </div>
+                <div>
+                    <label class="left-label">基本减除：</label>
+                    <input id="tax_threshold" type="text" placeholder="输入单月起征点" / value="5000">
+                    <label class="bottom-label"></label>
+                </div>
+                <div>
+                    <label class="left-label">专项附加扣除：</label>
+                    <input id="special_dedution" type="text" placeholder="输入单月专项扣除总额" />
+                    <label class="bottom-label"></label>
+                </div>
+                <div>
+                    <label class="left-label">其它扣除：</label>
+                    <input id="disabled-input" type="text" placeholder="截至当月累计商业健康保险费用，一般无，不处理" disabled=true />
+                </div>
+                <div>
+                    <button class="button button-small button-caution button-rounded">清除</button>
+                    <button class="button button-small button-primary button-rounded">计算</button>
+                </div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="result-data">
+                <div class="table-name"><label>个人所得税预扣率表一</label></div>
+                <div class="table-info"><label>（居民个人工资、薪金所得预扣预缴适用）</label></div>
+                <table class="gridtable">
+                    <tr>
+                        <th>级数</th>
+                        <th>累计预扣预缴应纳税所得额</th>
+                        <th>预扣率（%）</th>
+                        <th>速算扣除数</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>不超过36000元</td>
+                        <td>3</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>不超过36000元至144000元的部分</td>
+                        <td>10</td>
+                        <td>2520</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>超过144000元至300000元的部分</td>
+                        <td>20</td>
+                        <td>16920</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>超过300000元至420000元的部分</td>
+                        <td>25</td>
+                        <td>31920</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>超过420000元至660000元的部分</td>
+                        <td>30</td>
+                        <td>52920</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>超过660000元至960000元的部分</td>
+                        <td>35</td>
+                        <td>85920</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>超过960000元的部分</td>
+                        <td>45</td>
+                        <td>181920</td>
+                    </tr>
+                </table>
+                <div>累计预缴应纳税所得额：<span></span></div>
+                <div>适用税率：<span></span></div>
+                <div>速算扣除数：<span></span></div>
+                <div>本期应预扣预缴税额：<span></span></div>
+                <div>上期已预缴预扣税额：<span></span></div>
+                <div>本期应实缴税额：<span></span></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
