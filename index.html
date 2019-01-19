@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>个税小工具</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/button.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <script src="js/sweetalert.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -27,7 +25,7 @@
                 <div>
                     <label class="left-label">工资收入：</label>
                     <textarea id="salary" placeholder="逐月输入，以空格隔开" rows="3"></textarea>
-                    <div class="bottom-label"><label  id="salary_sum"></label></div>
+                    <div class="bottom-label"><label id="salary_sum"></label></div>
                 </div>
                 <div>
                     <label class="left-label">伙食费用：</label>
@@ -47,20 +45,21 @@
                 <div>
                     <label class="left-label">基本减除：</label>
                     <input id="tax_threshold" type="text" placeholder="输入单月起征点" / value="5000">
-                    <label class="bottom-label"></label>
+                    <label id="tax_threshold_label"></label>
                 </div>
                 <div>
                     <label class="left-label">专项附加扣除：</label>
                     <input id="special_dedution" type="text" placeholder="输入单月专项扣除总额" />
-                    <label class="bottom-label"></label>
+                    <label id="special_dedution_label"></label>
                 </div>
                 <div>
                     <label class="left-label">其它扣除：</label>
                     <input id="disabled-input" type="text" placeholder="截至当月累计商业健康保险费用，一般无，不处理" disabled=true />
                 </div>
                 <div>
-                    <button class="button button-small button-caution button-rounded">清除</button>
-                    <button class="button button-small button-primary button-rounded">计算</button>
+                    <button id='clear_btn'>清除</button>
+                    <button id='compute_btn'>计算</button>
+                    <label id="confirm_label"></label>
                 </div>
             </div>
             <div class="vertical-line"></div>
@@ -117,12 +116,12 @@
                         <td>181920</td>
                     </tr>
                 </table>
-                <div>累计预缴应纳税所得额：<span></span></div>
-                <div>适用税率：<span></span></div>
-                <div>速算扣除数：<span></span></div>
-                <div>本期应预扣预缴税额：<span></span></div>
-                <div>上期已预缴预扣税额：<span></span></div>
-                <div>本期应实缴税额：<span></span></div>
+                <div class='final-result'>累计预缴应纳税所得额：<label id='pre_tax_sum'></label></div>
+                <div class='final-result'>适用税率：<label id='tax_rate'></label></div>
+                <div class='final-result'>速算扣除数：<label id='quick_deduction'></label></div>
+                <div class='final-result'>本期应预扣预缴税额：<label id='cur_tax'></label></div>
+                <div class='final-result'>上期已预缴预扣税额：<label id='last_tax'></label></div>
+                <div class='final-result'>本期应实缴税额：<label id='real_tax'></label></div>
             </div>
         </div>
     </div>

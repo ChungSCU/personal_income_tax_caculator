@@ -151,3 +151,37 @@ table.gridtable td {
     border-color: #666666;
     background-color: #ffffff;
 }
+
+button {
+    width: 60px;
+    height: 30px;
+    border-width: 3px;
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+}
+
+#clear_btn {
+    margin-left: 115px;
+}
+
+#compute_btn {
+    margin-left: 35px;
+}
+
+.final-result {
+    margin-bottom: 6px;
+}
+
+#pre_tax_sum, #tax_rate, #quick_deduction, #cur_tax, #last_tax {
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    color: gold;
+}
+
+#real_tax {
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+}
