@@ -174,7 +174,7 @@ window.onload = function () {
             }
 
             //参数个数不符
-            if (inputs[i].value.split(' ').length !== month_id && i < 4) {
+            if (trim(inputs[i].value).split(' ').length !== month_id && i < 4) {
                 inputs[i].focus();
                 inputs[i].className = 'error_input';
                 confirm_label.innerHTML = '表单参数个数不符，请检查';
@@ -201,7 +201,7 @@ window.onload = function () {
 
     //用于累计计算
     function sumDirect(str, isLast) {
-        var arr = str.split(" ");
+        var arr = trim(str).split(" ");
         var sum = 0.0;
         var size = arr.length;
         if (isLast) size = size - 1;
